@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+	system("clear");
+
+	float x, y, res;
+	int op, sair;
+
+	do{
+		printf("1. Soma\n");
+		printf("2. Subtração\n");
+		printf("3. Multiplicação\n");
+		printf("4. Divisão\n");
+		printf("Digite a opção desejada: ");
+		scanf("%d", &op);
+		
+	switch(op){
+			case 1: // soma
+				printf("Digite os valores: ");
+				scanf("%f %f", &x, &y);
+				res = x + y;
+				printf("Soma: %.2f\n", res);
+				break;
+
+			case 2: // subtração
+				printf("Digite os valores: ");
+				scanf("%f %f", &x, &y);
+				res = x - y;
+				printf("Subtração: %.2f\n", res);
+				break;
+
+			case 3: // Multiplicação
+				printf("Digite os valores: ");
+				scanf("%f %f", &x, &y);
+				res = x * y;
+				printf("Multiplicação: %.2f\n", res);
+				break;
+		
+			 case 4: // Divisão
+				printf("Digite os valores: ");
+				scanf("%f %f", &x, &y);
+				res = x / y;
+				printf("Subtração: %.2f\n", res);
+				break;
+
+			default:
+				printf("Escolha inválida\n");
+				break;
+		}
+
+		printf("\nDeseja sair?\n1. Sim\n2. Não\n");
+		scanf("%d", &sair);
+	}while(sair != 1);
+
+	return 0;
+}
